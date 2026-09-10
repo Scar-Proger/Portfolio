@@ -10,18 +10,39 @@
   function initNavigation(){
     const nav = document.querySelector('.topnav');
     if(!nav) return;
-    const links = nav.querySelectorAll('a');
+    const links = nav.querySelectorAll('a:not(.nav-logo)');
+    const header = document.querySelector('.topbar');
+    const anchorGap = 30;
     const moveIndicator = link=>{
       nav.style.setProperty('--indicator-left', `${link.offsetLeft}px`);
       nav.style.setProperty('--indicator-width', `${link.offsetWidth}px`);
     };
+    const scrollToTarget = link=>{
+      const target = document.querySelector(link.getAttribute('href'));
+      if(!target) return;
+
+      const headerHeight = header ? header.getBoundingClientRect().height : 0;
+      const heading = target.querySelector('.sec-eyebrow') || target;
+      const targetTop = target.id === 'top'
+        ? 0
+        : window.scrollY + heading.getBoundingClientRect().top - headerHeight - anchorGap;
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const extraBottomSpace = Math.max(0, targetTop - maxScroll);
+
+      document.body.style.paddingBottom = `${Math.ceil(extraBottomSpace)}px`;
+
+      window.history.pushState(null, '', link.getAttribute('href'));
+      window.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
+    };
     const activeLink = nav.querySelector('.active') || links[0];
     moveIndicator(activeLink);
     links.forEach(link=>{
-      link.addEventListener('click', ()=>{
+      link.addEventListener('click', event=>{
+        event.preventDefault();
         links.forEach(item=>item.classList.remove('active'));
         link.classList.add('active');
         moveIndicator(link);
+        scrollToTarget(link);
       });
     });
     window.addEventListener('resize', ()=>{
@@ -30,6 +51,44 @@
   }
 
   initNavigation();
+
+  function initStackTooltips(){
+    const icons = document.querySelectorAll('.stack-icon[title]');
+    if(!icons.length) return;
+
+    icons.forEach(icon=>{
+      const label = icon.getAttribute('title');
+      icon.dataset.tooltip = label;
+      icon.removeAttribute('title');
+      icon.setAttribute('tabindex', '0');
+      icon.setAttribute('aria-label', label);
+
+      const placeTooltip = ()=>{
+        const rect = icon.getBoundingClientRect();
+        const tooltipHeight = 34;
+        const tooltipGap = 9;
+        const hasRoomAbove = rect.top >= tooltipHeight + tooltipGap;
+        const hasRoomBelow = window.innerHeight - rect.bottom >= tooltipHeight + tooltipGap;
+        const hasRoomRight = window.innerWidth - rect.right >= 190;
+
+        let position = 'top';
+        if(!hasRoomAbove && hasRoomBelow) position = 'bottom';
+        else if(!hasRoomAbove && !hasRoomBelow && hasRoomRight) position = 'right';
+        else if(!hasRoomAbove && !hasRoomBelow) position = 'left';
+        icon.dataset.tooltipPosition = position;
+      };
+
+      icon.addEventListener('mouseenter', ()=>{
+        placeTooltip();
+        icon.classList.add('is-tooltip-visible');
+      });
+      icon.addEventListener('mouseleave', ()=> icon.classList.remove('is-tooltip-visible'));
+      icon.addEventListener('focus', placeTooltip);
+      icon.addEventListener('blur', ()=> icon.classList.remove('is-tooltip-visible'));
+    });
+  }
+
+  initStackTooltips();
 
   let wi = 0;
   function nextWord(){
@@ -47,6 +106,32 @@
     setTimeout(nextWord, 240);
   }
   nextWord();
+
+  function initRoleTyping(){
+    const el = document.getElementById('roleTyping');
+    if(!el) return;
+    const roles = ['опытный программист', 'самоучка', 'открыт к стажировкам', 'учусь каждый день'];
+    let ri = 0, ci = 0, deleting = false;
+
+    function tick(){
+      const word = roles[ri];
+      ci += deleting ? -1 : 1;
+      el.innerHTML = word.slice(0, ci) + '<span class="caret"></span>';
+
+      let delay = deleting ? 34 : 62;
+      if(!deleting && ci === word.length){
+        delay = 1800;
+        deleting = true;
+      } else if(deleting && ci === 0){
+        deleting = false;
+        ri = (ri + 1) % roles.length;
+        delay = 300;
+      }
+      setTimeout(tick, delay);
+    }
+    tick();
+  }
+  initRoleTyping();
 
   function initReveal(){
     const items = document.querySelectorAll('.reveal');
