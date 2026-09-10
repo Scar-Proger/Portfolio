@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#160406">
+    <meta name="description" content="Антон — программист. Портфолио: проекты, путь в разработку, контакты.">
+    <title>Антон — портфолио</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23160406'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='58' font-weight='700' fill='%23dba15f' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="vignette"></div>
+    <div class="grain"></div>
+
+    <div id="boot">
+        <div>
+            <div class="boot-title">anton — portfolio</div>
+            <div class="boot-line mono" id="bootLine"></div>
+        </div>
+    </div>
+
+    <header class="topbar">
+        <nav class="topnav" aria-label="Основная навигация">
+            <a class="active" href="#top">Главная</a>
+            <a href="#who">Обо мне</a>
+            <a href="#process">Навыки</a>
+            <a href="#projects">Проекты</a>
+            <a href="#collab">Контакты</a>
+        </nav>
+        <a class="topbar-action" href="#collab">Связаться <span>↗</span></a>
+    </header>
+
+    <main id="mainContent">
+
+        <div class="cover" id="top">
+            <div class="cover-photo">
+                <img width="700" height="1556" loading="eager" fetchpriority="high" decoding="async" src="img/hero.jpg" alt="Антон">
+            </div>
+            <div class="cover-content">
+                <div class="cover-tag"><span class="l"></span>PORTFOLIO · CODE · 2026</div>
+                <h1 class="cover-title">Антон</h1>
+                <div class="cover-role">программист</div>
+                <div class="cover-meta">
+                    <div><b>22</b>года</div>
+                    <div><b>JS / Python</b>основной стек</div>
+                    <div><b>открыт</b>к предложениям</div>
+                </div>
+            </div>
+            <div class="cover-scroll"><span class="ln"></span>scroll</div>
+        </div>
+
+        <section id="who">
+            <div class="sec-eyebrow reveal">// Обо мне</div>
+            <h2 class="sec-title reveal">Кто я?</h2>
+            <div class="who-grid">
+                <div class="who-photo-wrap reveal d1">
+                    <div class="who-photo"><img width="700" height="900" loading="lazy" decoding="async" src="img/about.jpg" alt="Антон"></div>
+                </div>
+                <div class="who-text reveal d2">
+                    <p>Меня зовут <b>Антон</b>, мне 22. Я программист — пришёл в разработку из технической сферы, где привык работать с оборудованием, схемами и чёткими инструкциями.</p>
+                    <p>Этот же подход переношу в код: <b>сначала разбираюсь в задаче</b>, потом пишу решение. Не боюсь сложных систем и не бросаю дело на середине.</p>
+                    <p>Сейчас изучаю <b>JavaScript и Python</b>, собираю первые проекты и открыт для стажировок и небольших заказов, на которых можно расти.</p>
+                    <div class="who-actions">
+                        <a href="#projects" class="btn btn-solid">Смотреть проекты</a>
+                        <a href="#collab" class="btn btn-outline">Написать мне</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="path">
+            <div class="sec-eyebrow reveal">// Путь</div>
+            <h2 class="sec-title reveal">Из электрика в программисты</h2>
+            <div class="growth-grid">
+                <div class="growth-card reveal">
+                    <div class="stage">было</div>
+                    <h4>Техническая сфера</h4>
+                    <ul>
+                        <li>Работа с оборудованием и схемами</li>
+                        <li>Чёткие инструкции и регламенты</li>
+                        <li>Диагностика неисправностей руками</li>
+                    </ul>
+                </div>
+                <div class="growth-arrow reveal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </div>
+                <div class="growth-card now reveal">
+                    <div class="stage">стало</div>
+                    <h4>Разработка</h4>
+                    <ul>
+                        <li>Тот же подход — только вместо схем код</li>
+                        <li>JavaScript, Python, работа с базами данных</li>
+                        <li>Учусь каждую неделю, собираю проекты</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="process">
+            <div class="sec-eyebrow reveal">// Как я работаю</div>
+            <h2 class="sec-title reveal">Этапы работы</h2>
+            <div class="process-grid">
+                <div class="proc-item reveal"><div class="n serif">01</div><div><h4>Знакомство с задачей</h4><p>Читаю, что нужно, задаю вопросы, пока не станет ясно на 100%.</p></div></div>
+                <div class="proc-item reveal d1"><div class="n serif">02</div><div><h4>План и структура</h4><p>Разбиваю задачу на шаги, выбираю подходящий инструмент.</p></div></div>
+                <div class="proc-item reveal d2"><div class="n serif">03</div><div><h4>Разработка</h4><p>Пишу код небольшими понятными кусками, сразу проверяю.</p></div></div>
+                <div class="proc-item reveal d3"><div class="n serif">04</div><div><h4>Тестирование</h4><p>Ищу края и ошибки — там, где обычно всё ломается.</p></div></div>
+                <div class="proc-item reveal"><div class="n serif">05</div><div><h4>Правки</h4><p>Дорабатываю по фидбэку, без обид на критику.</p></div></div>
+                <div class="proc-item reveal d1"><div class="n serif">06</div><div><h4>Сдача результата</h4><p>Отдаю рабочее решение и объясняю, как оно устроено.</p></div></div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="sec-eyebrow reveal">// Что я делаю</div>
+            <h2 class="sec-title reveal">Проекты</h2>
+            <div class="proj-grid">
+                <div class="proj-card reveal">
+                    <div class="proj-window"><span></span><span></span><span></span><span class="fn">portfolio/index.html</span></div>
+                    <div class="proj-visual">
+                        <div class="code" data-code="&amp;lt;<span class=&quot;k&quot;>section</span> class=<span class=&quot;s&quot;>&quot;hero&quot;</span>&amp;gt;<br>&nbsp;&nbsp;&amp;lt;<span class=&quot;k&quot;>h1</span>&amp;gt;Антон&amp;lt;/<span class=&quot;k&quot;>h1</span>&amp;gt;<br>&amp;lt;/<span class=&quot;k&quot;>section</span>&amp;gt;">
+                            &lt;<span class="k">section</span> class=<span class="s">"hero"</span>&gt;<br>
+                            &nbsp;&nbsp;&lt;<span class="k">h1</span>&gt;Антон&lt;/<span class="k">h1</span>&gt;<br>
+                            &lt;/<span class="k">section</span>&gt;
+                        </div>
+                    </div>
+                    <div class="proj-info">
+                        <div class="tag mono">HTML · CSS · JS</div>
+                        <h4>Сайт-портфолио</h4>
+                        <p>Этот сайт целиком: анимация загрузки, адаптивная вёрстка, один файл без фреймворков.</p>
+                    </div>
+                </div>
+
+                <div class="proj-card reveal d1">
+                    <div class="proj-window"><span></span><span></span><span></span><span class="fn">algorithms.py</span></div>
+                    <div class="proj-visual">
+                        <div class="algo-vis" aria-hidden="true">
+                            <span class="algo-bar algo-b1"></span>
+                            <span class="algo-bar algo-b2"></span>
+                            <span class="algo-bar algo-b3"></span>
+                            <span class="algo-bar algo-b4"></span>
+                            <span class="algo-bar algo-b5"></span>
+                            <span class="algo-bar algo-b6"></span>
+                            <span class="algo-bar algo-b7"></span>
+                        </div>
+                    </div>
+                    <div class="proj-info">
+                        <div class="tag mono">Python</div>
+                        <h4>Алгоритмы и структуры данных</h4>
+                        <p>Практика на задачах — сортировки, поиск, работа со строками.</p>
+                    </div>
+                </div>
+
+                <div class="proj-card reveal d2">
+                    <div class="proj-window"><span></span><span></span><span></span><span class="fn">tasks.sql</span></div>
+                    <div class="proj-visual">
+                        <div class="code" data-code="<span class=&quot;k&quot;>SELECT</span> * <span class=&quot;k&quot;>FROM</span> tasks<br><span class=&quot;k&quot;>WHERE</span> done = <span class=&quot;s&quot;>false</span>;"><span class="k">SELECT</span> * <span class="k">FROM</span> tasks<br><span class="k">WHERE</span> done = <span class="s">false</span>;</div>
+                    </div>
+                    <div class="proj-info">
+                        <div class="tag mono">SQL · Backend</div>
+                        <h4>Учебный трекер задач</h4>
+                        <p>Небольшое CRUD-приложение с базой данных для практики бэкенда.</p>
+                    </div>
+                </div>
+
+                <div class="proj-card reveal d3">
+                    <div class="proj-window"><span></span><span></span><span></span><span class="fn">languages.md</span></div>
+                    <div class="proj-visual">
+                        <div class="lang-big">150<span class="lang-plus">+</span></div>
+                        <div class="roadmap">
+                            <span class="stop"></span><span class="lane"></span><span class="stop"></span><span class="lane"></span><span class="stop"></span>
+                        </div>
+                        <div class="roadmap-labels">
+                            <span>JavaScript</span><span>Python</span><span>+ ещё 148</span>
+                        </div>
+                    </div>
+                    <div class="proj-info">
+                        <div class="tag mono">Skills · Языки</div>
+                        <h4>Карта языков</h4>
+                        <p>150+ языков программирования — от JS и Python до эзотерики вроде Brainfuck. В проде — только пара из них.</p>
+                    </div>
+                </div>
+
+                <div class="proj-card reveal d4">
+                    <div class="proj-window"><span></span><span></span><span></span><span class="fn">bot.py</span></div>
+                    <div class="proj-visual">
+                        <div class="code" data-code="<span class=&quot;k&quot;>@bot.message_handler</span>()<br><span class=&quot;k&quot;>def</span> start(msg):<br>&nbsp;&nbsp;bot.reply(<span class=&quot;s&quot;>&quot;привет&quot;</span>)">
+                            <span class="k">@bot.message_handler</span>()<br>
+                            <span class="k">def</span> start(msg):<br>
+                            &nbsp;&nbsp;bot.reply(<span class="s">"привет"</span>)
+                        </div>
+                    </div>
+                    <div class="proj-info">
+                        <div class="tag mono">Python · Telegram API</div>
+                        <h4>Телеграм-бот</h4>
+                        <p>Бот для рутинных задач: напоминания и простые команды через Telegram Bot API.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="strip-title">
+                <h3 class="sec-title reveal" style="font-size:26px;">Другие работы</h3>
+                <span class="mono reveal">01 / 04</span>
+            </div>
+            <div class="other-grid">
+                <div class="other-card reveal">
+                    <div class="other-visual" style="background:linear-gradient(160deg, rgba(232,131,107,.22), rgba(232,131,107,.04));">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--rose)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M8 20h8M12 18v2M7 9h6M7 12h10"></path></svg>
+                    </div>
+                    <div class="other-info">
+                        <div class="tag">API · NODE.JS</div>
+                        <h5>Погодный бот</h5>
+                        <p>Telegram-бот, который берёт данные из открытого API и отвечает прогнозом.</p>
+                    </div>
+                </div>
+                <div class="other-card reveal d1">
+                    <div class="other-visual" style="background:linear-gradient(160deg, rgba(219,161,95,.25), rgba(219,161,95,.04));">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"></path></svg>
+                    </div>
+                    <div class="other-info">
+                        <div class="tag">GIT · CLI</div>
+                        <h5>Git-практика</h5>
+                        <p>Ветки, ребейз, конфликты — набор учебных репозиториев для отработки команд.</p>
+                    </div>
+                </div>
+                <div class="other-card reveal d2">
+                    <div class="other-visual" style="background:linear-gradient(160deg, rgba(245,230,211,.16), rgba(245,230,211,.03));">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--cream)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                    </div>
+                    <div class="other-info">
+                        <div class="tag">JAVASCRIPT</div>
+                        <h5>Мини-игра «Змейка»</h5>
+                        <p>Классика на canvas — счёт, уровни сложности, сохранение рекорда.</p>
+                    </div>
+                </div>
+                <div class="other-card reveal d3">
+                    <div class="other-visual" style="background:linear-gradient(160deg, rgba(232,131,107,.18), rgba(219,161,95,.06));">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="var(--rose)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-4z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+                    </div>
+                    <div class="other-info">
+                        <div class="tag">ТЕСТОВЫЕ</div>
+                        <h5>Задания на собеседования</h5>
+                        <p>Небольшие решённые задачи из тестовых заданий разных компаний.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="collab">
+            <div class="sec-eyebrow reveal">// Сотрудничество</div>
+            <h2 class="sec-title reveal">Давай работать</h2>
+            <div class="collab reveal d1">
+                <div class="collab-text">
+                    <div class="sec-eyebrow" style="margin-top:0;">status: открыт для предложений</div>
+                    <p>Расскажи о задаче — отвечу и обсудим детали. Подхожу для стажировок, учебных и небольших коммерческих проектов.</p>
+                    <div class="qr-row">
+                        <div class="qr-box">
+                            <a class="qr" href="https://t.me/anton4ik_by" target="_blank" rel="noopener" aria-label="Открыть Telegram Антона">
+                                <img src="img/telegram-qr.png" alt="QR Telegram">
+                            </a>
+                            <span>Telegram</span>
+                        </div>
+                        <div class="qr-box">
+                            <a class="qr" href="mailto:anton@example.com" aria-label="Написать на Email">
+                                <img src="img/email-qr.png" alt="QR Email">
+                            </a>
+                            <span>Email</span>
+                        </div>
+                    </div>
+                    <div class="who-actions" style="margin-top:24px;">
+                        <a href="mailto:anton@example.com" class="btn btn-solid">Написать на почту</a>
+                    </div>
+                </div>
+                <div class="collab-photo">
+                    <div class="collab-photo-wrap">
+                            <img width="700" height="900" loading="lazy" decoding="async" src="img/contact.jpg" alt="Антон">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-mark serif">Антон</div>
+            <p>© 2026 · сделано вручную, без фреймворков · index.html</p>
+        </footer>
+
+    </main>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>
